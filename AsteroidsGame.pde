@@ -2,6 +2,7 @@
 
 Spaceship a = new Spaceship();
 Star [] stars;
+Asteroid b = new Asteroid();
 
 public void setup() 
 {
@@ -23,13 +24,15 @@ public void draw()
 	}
   a.show();
   a.move();
+  b.move();
+  b.show();
 }
 
 public void keyPressed()
 {
  if (key == 'w')
  {
- 	a.accelerate(1);
+ 	a.accelerate(0.5);
  }
  if(key == 'a')
  {
