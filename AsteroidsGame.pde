@@ -3,7 +3,7 @@
 Spaceship a = new Spaceship();
 Star [] stars;
 Asteroid b = new Asteroid();
-
+Asteroid [] asfield;
 public void setup() 
 {
   //your code here
@@ -12,6 +12,10 @@ public void setup()
   stars = new Star[100];
 	for (int i = 0; i < stars.length; i++) {
 		stars[i] = new Star();
+	}
+  asfield = new Asteroid[50];
+	for (int i = 0; i < asfield.length; i++) {
+		asfield[i] = new Asteroid();
 	}
 }
 
@@ -24,8 +28,10 @@ public void draw()
 	}
   a.show();
   a.move();
-  b.move();
-  b.show();
+  for (int i = 0; i < asfield.length; i++) {
+  		asfield[i].move();
+		asfield[i].show();
+	}
 }
 
 public void keyPressed()
