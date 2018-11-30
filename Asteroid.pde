@@ -14,17 +14,17 @@ class Asteroid extends Floater
   public Asteroid()
    {
 	corners = 6;  //the number of corners, a triangular floater has 3   
-	int[] xS = {-11,7,13,6,-11,-5};   
-	int[] yS = {-8,-8,0,10,8,0};
+	int[] xS = {-22,14,26,12,-22,-10};   
+	int[] yS = {-16,-16,0,20,16,0};
 	xCorners = xS;
 	yCorners = yS;   
 	myColor = color(100, 100, 100);   
 	myCenterX = (int)(Math.random()*1001);
 	myCenterY = (int)(Math.random()*1001); 
-	myDirectionX = (Math.random()*TWO_PI*2-TWO_PI);
-	myDirectionY = (Math.random()*TWO_PI*2-TWO_PI); 
-	myPointDirection = 0;
-	rotationspeed = ((int)(Math.random()*3)+1);   	
+	myDirectionX = Math.random()*2;
+	myDirectionY = Math.random()*2; 
+	myPointDirection = Math.random()*TWO_PI*2;
+	rotationspeed = ((int)(Math.random()*3)+3);   	
    }
    public void move(){
    	turn(rotationspeed);
