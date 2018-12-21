@@ -3,6 +3,7 @@
 Spaceship a = new Spaceship();
 Star [] stars;
 ArrayList <Asteroid> asfield = new ArrayList<Asteroid>();
+ArrayList <Bullet> bullets = new ArrayList<Bullet>();
 public void setup() 
 {
   //your code here
@@ -35,7 +36,17 @@ public void draw()
 			asfield.remove(i);
 		}
 	}
+	for (int i = 0; i < bullets.size(); i++) {
+ 		if (bullets.get(i).getX() < 1){
+ 			bullets.remove(i);
+ 		}
+ 		 if(bullets.get(i).getY() < 1){
+ 			bullets.remove(i);
+ 		}
+ 		bullets.get(i).move();
+ 		bullets.get(i).show();
 
+	}
 }
 
 public void keyPressed()
@@ -59,6 +70,11 @@ public void keyPressed()
  	a.setPointDirection(0);
  	a.setDirectionY(0);
  	a.setDirectionX(0);
+ }
+ if(key == '2')
+ {
+ 	Bullet e = new Bullet(a);
+ 	bullets.add(e);
  }
 }
 

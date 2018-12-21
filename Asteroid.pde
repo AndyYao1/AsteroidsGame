@@ -21,8 +21,8 @@ class Asteroid extends Floater
 	myColor = color(100, 100, 100);   
 	myCenterX = (int)(Math.random()*1001);
 	myCenterY = (int)(Math.random()*1001); 
-	myDirectionX = Math.random()*2;
-	myDirectionY = Math.random()*2; 
+	myDirectionX = Math.random()*4-2;
+	myDirectionY = Math.random()*4-2; 
 	myPointDirection = Math.random()*TWO_PI*2;
 	rotationspeed = ((int)(Math.random()*3)+3);   	
    }
